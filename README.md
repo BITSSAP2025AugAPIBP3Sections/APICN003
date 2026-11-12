@@ -19,9 +19,9 @@ Advanced RAG-based Income Tax chatbot with FAISS vector search, streaming TTS, a
 - **VIVO** `--mode vivo` — both of the above chained.
 
 ## Team
-| Member | Role | Email |
-|--------|------|-------|
-| Bhoomika Rajashekhar | Developer | i573573@dal.ca |
+| Member | Email |
+|--------|-------|
+| Bhoomika Rajashekhar | 2023sl70027 |
 
 ## Hardware used
 
