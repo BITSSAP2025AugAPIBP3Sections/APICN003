@@ -24,6 +24,8 @@ Advanced RAG-based Income Tax chatbot with FAISS vector search, streaming TTS, a
 | Bhoomika Rajashekhar | 2023sl70027 |
 | Swetha S Sankar | 2023sl70029 |
 | Lalithya H P | 2023sl70023 |
+| Prathvi | 2023sl70028 |
+
 
 ## Hardware used
 
