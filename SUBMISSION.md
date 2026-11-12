@@ -1,10 +1,11 @@
 # Submission — APICN003
 
 - Team ID: APICN003
+- Members: Bhoomika Rajashekhar (2023sl70027), Prathvi S (2023sl70028)
 - App entry point: `python src/app.py`
 - Default provider: SLM (Ollama + llama3.1:8b)
-- STT engine: faster-whisper (base) — press-enter press-enter recording
-- TTS engine: pyttsx3 (macOS)
+- STT engine: Groq Whisper API (whisper-large-v3-turbo) with faster-whisper local fallback
+- TTS engine: edge-tts (Microsoft Neural Voice en-IN-NeerjaNeural) with sentence-chunked streaming
 
 ## External data used
 - None beyond the assignment corpus

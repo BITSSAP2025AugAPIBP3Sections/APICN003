@@ -15,6 +15,11 @@ import sys
 import time
 from pathlib import Path
 
+# Fix Unicode output on Windows terminal
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from dotenv import load_dotenv  # noqa: E402
@@ -26,7 +31,14 @@ load_dotenv()
 
 def answer(ret: Retriever, question: str, history: list[dict], top_k: int) -> tuple[str, list[dict]]:
     t0 = time.time()
-    hits = ret.search(question, top_k=int(os.getenv("TOP_K", 5)))
+    # Use question + key terms from history for better retrieval on follow-ups
+    search_query = question
+    if history:
+        # prepend last user turn to improve context-aware retrieval
+        last_user = next((m["content"] for m in reversed(history) if m["role"] == "user"), "")
+        if last_user and last_user != question:
+            search_query = last_user + " " + question
+    hits = ret.search(search_query, top_k=int(os.getenv("TOP_K", 5)))
     context = "\n\n".join(h["text"] + f"\n[source: {h['doc']} p.{h['page']}]" for h in hits)
     text = chat(question, context, history)
     print(f"[retrieval {(time.time()-t0)*1000:.0f} ms]")

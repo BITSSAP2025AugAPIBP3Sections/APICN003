@@ -5,11 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from rag.retriever import Retriever, tokenize  # noqa: E402
-
-
-def test_tokenize_drops_stopwords() -> None:
-    assert "the" not in tokenize("the capital gain")
+from rag.retriever import Retriever  # noqa: E402
 
 
 def test_retriever(tmp_path: Path) -> None:

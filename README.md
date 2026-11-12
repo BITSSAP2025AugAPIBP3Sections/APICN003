@@ -19,14 +19,13 @@ Advanced RAG-based Income Tax chatbot with FAISS vector search, streaming TTS, a
 - **VIVO** `--mode vivo` — both of the above chained.
 
 ## Team
-| Member | Email |
-|--------|-------|
-| Bhoomika Rajashekhar | 2023sl70027 |
-| Swetha S Sankar | 2023sl70029 |
-| Lalithya H P | 2023sl70023 |
-| Prathvi | 2023sl70028 |
-| Srishti Manjunath | 2023SL70040 |
-
+| Member | Role | Email |
+|--------|------|-------|
+| Bhoomika Rajashekhar | Developer | 2023sl70027 |
+| Prathvi S | Developer | 2023sl70028 |
+| Swetha S Sankar | Developer | 2023sl70029 |
+| Lalithya H P | Developer | 2023sl70023 |
+| Srishti Manjunath | Developer | 2023SL70040 |
 
 ## Hardware used
 
